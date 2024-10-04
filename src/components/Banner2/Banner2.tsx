@@ -6,6 +6,7 @@ import Turkey from '../../assets/Turkey.jpg';
 import earthquake2 from '../../assets/earthquake2.jpeg'; 
 import earthquake3 from '../../assets/earthquake3.jpg'; 
 import earthquake4 from '../../assets/earthquake4.jpg'; 
+import { useNavigate } from 'react-router-dom';
 
 const images = [Turkey, earthquake2, earthquake3, earthquake4]; 
 
@@ -13,6 +14,7 @@ const Banner2 = () => {
     const [currentImage, setCurrentImage] = useState(images[0]);
     const [index, setIndex] = useState(0);
     const [fadeClass, setFadeClass] = useState('fade-in');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -44,8 +46,8 @@ const Banner2 = () => {
                             <p><strong>Don't just imagine the future- experience it.</strong></p>
                             <p>Click below to watch the demo and see QuakeAway in action!</p>
                             <div className="button-container">
-                                <button className="watchDemo">Watch the Demo Now</button>
-                                <button className="uploadFile">Upload File</button>
+                                <Button className="watchDemo">Watch the Demo Now</Button>
+                                <Button className="uploadFile" onClick={() => navigate("/info")}>Upload File</Button>
                             </div>
                         </Col>
                         <Col md={5} className="banner-image-container d-flex justify-content-center align-items-center">
