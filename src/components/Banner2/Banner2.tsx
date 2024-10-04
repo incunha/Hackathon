@@ -6,12 +6,14 @@ import Turkey from '../../assets/Turkey.jpg';
 import Mars from '../../assets/earthquake2.jpeg'; 
 import Moon from '../../assets/earthquake3.jpg'; 
 import Jupiter from '../../assets/earthquake4.jpg'; 
+import { useNavigate } from 'react-router-dom';
 
 const images = [Turkey, Mars, Moon, Jupiter]; 
 
 const Banner2 = () => {
     const [currentImage, setCurrentImage] = useState(images[0]);
     const [index, setIndex] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -38,7 +40,7 @@ const Banner2 = () => {
                             <p>Click below to watch the demo and see QuakeAway in action!</p>
                             <div className="button-container">
                                 <Button className="watchDemo">Watch the Demo Now</Button>
-                                <Button className="uploadFile">Upload File</Button>
+                                <Button className="uploadFile" onClick={() => navigate("/info")}>Upload File</Button>
                             </div>
                         </Col>
                         <Col md={6} className="image-container d-flex justify-content-center align-items-center">
