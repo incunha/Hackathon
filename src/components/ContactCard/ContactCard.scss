@@ -1,7 +1,7 @@
 .contact-card {
     background-color: black !important; 
     color: white; 
-    padding: 20px; 
+    padding: 60px; 
     border-radius: 8px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
     width: 986px; 
@@ -9,14 +9,13 @@
     margin: 20px auto; 
     text-align: left; 
     border-radius: 30px;
-    margin-top: -40px;
+    margin-top: -60px;
     margin-bottom: 60px;
 
     .contact-title {
         margin-bottom: 15px; 
         font-size: 50px;
         font-weight: bold;
-        margin-top: 40px;
     }
 
     .contact-content {

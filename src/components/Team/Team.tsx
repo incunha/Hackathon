@@ -66,10 +66,10 @@ const Team = () => {
 
     return (
         <div className="team-section" style={{backgroundColor: 'white'}}>
-            <div className="container" style={{backgroundColor: 'white', padding: '80px'}}>
-                <div className="text-center mb-5">
+            <div className="container" style={{backgroundColor: 'white', padding: '100px'}}>
+                <div className="text-left mb-5">
                     <h2 className="title">About Us</h2>
-                    <p>At Nazcas, we're a team of tech enthusiasts from BRNDTS, driven by a shared vision: using cutting-edge technology 
+                    <p className="teamDescription">At Nazcas, we're a team of tech enthusiasts from BRNDTS, driven by a shared vision: using cutting-edge technology 
                         to make space safer for human habitation. Our diverse skills blend into a powerhouse of innovation and creativity. 
                         Meet the brilliant minds behind QuakeAway:</p>
                 </div>

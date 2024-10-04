@@ -3,20 +3,27 @@ import './Banner2.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button } from 'react-bootstrap'; 
 import Turkey from '../../assets/Turkey.jpg';
-import Mars from '../../assets/earthquake2.jpeg'; 
-import Moon from '../../assets/earthquake3.jpg'; 
-import Jupiter from '../../assets/earthquake4.jpg'; 
+import earthquake2 from '../../assets/earthquake2.jpeg'; 
+import earthquake3 from '../../assets/earthquake3.jpg'; 
+import earthquake4 from '../../assets/earthquake4.jpg'; 
 
-const images = [Turkey, Mars, Moon, Jupiter]; 
+const images = [Turkey, earthquake2, earthquake3, earthquake4]; 
 
 const Banner2 = () => {
     const [currentImage, setCurrentImage] = useState(images[0]);
     const [index, setIndex] = useState(0);
+    const [fadeClass, setFadeClass] = useState('fade-in');
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setIndex((prevIndex) => (prevIndex + 1) % images.length);
-            setCurrentImage(images[(index + 1) % images.length]);
+            setFadeClass('fade-out');
+
+         
+            setTimeout(() => {
+                setIndex((prevIndex) => (prevIndex + 1) % images.length);
+                setCurrentImage(images[(index + 1) % images.length]);
+                setFadeClass('fade-in');
+            }, 500); 
         }, 5000); 
 
         return () => clearInterval(interval); 
@@ -25,24 +32,24 @@ const Banner2 = () => {
     return (
         <div className="banner2">
             <div className="overlay d-flex align-items-center">
-                <Container>
+                <Container style={{marginLeft: "7%"}}>
                     <Row className="align-items-center">
-                        <Col md={6} className="text-container p-4">
-                            <h3>Ready to Explore the Future of Safe Space Habitats?</h3>
-                            <p>With QuakeAway, you can discover how advanced AI-
+                        <Col md={5} className="text-container-2 p-4">
+                        <h3><strong>Ready to Explore the Future of Safe Space Habitats?</strong></h3>
+                            <p>With <strong>QuakeAway</strong>, you can discover how advanced AI-
                                 driven seismic analysis is revolutionizing the way we plan 
                                 and build on other planets. See how our cutting-edge 
                                 solution works in real time to isolate seismic activity and 
                                 identify stable regions for safe construction.</p>
-                            <p>Don't just imagine the future- experience it.</p>
+                            <p><strong>Don't just imagine the future- experience it.</strong></p>
                             <p>Click below to watch the demo and see QuakeAway in action!</p>
                             <div className="button-container">
-                                <Button className="watchDemo">Watch the Demo Now</Button>
-                                <Button className="uploadFile">Upload File</Button>
+                                <button className="watchDemo">Watch the Demo Now</button>
+                                <button className="uploadFile">Upload File</button>
                             </div>
                         </Col>
-                        <Col md={6} className="image-container d-flex justify-content-center align-items-center">
-                            <img src={currentImage} alt="Space" className="img-fluid" />
+                        <Col md={5} className="banner-image-container d-flex justify-content-center align-items-center">
+                        <img src={currentImage} alt="Space" className={`img-fluid ${fadeClass}`} />
                         </Col>
                     </Row>
                 </Container>
