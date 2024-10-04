@@ -1,26 +1,27 @@
-import React from 'react';
-import './App.scss';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Header from '../src/components/Header/Header';
-import Banner from '../src/components/Banner/Banner';
-import Banner2 from './components/Banner2/Banner2';
-import Banner3 from './components/Banner3/Banner3';
-import Team from './components/Team/Team';
-import ContactCard from './components/ContactCard/ContactCard';
 import Footer from './components/Footer/Footer';
+
+import './App.scss';
+import Home from "./pages/home/Home";
+import Info from "./pages/info/Info";
 
 
 function App() {
 
   return (
-    <>
-    <Header/>
-    <Banner/>
-    <Banner2/>
-    <Banner3/>
-    <Team/>
-    <ContactCard/>
-    <Footer/>
-    </>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/info" element={<Info/>} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
