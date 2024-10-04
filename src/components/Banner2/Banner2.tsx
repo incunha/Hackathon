@@ -37,8 +37,8 @@ const Banner2 = () => {
                             <p>Don't just imagine the future- experience it.</p>
                             <p>Click below to watch the demo and see QuakeAway in action!</p>
                             <div className="button-container">
-                                <Button variant="primary" className="mr-2">Watch the Demo Now</Button>
-                                <Button variant="secondary">Upload File</Button>
+                                <Button className="watchDemo">Watch the Demo Now</Button>
+                                <Button className="uploadFile">Upload File</Button>
                             </div>
                         </Col>
                         <Col md={6} className="image-container d-flex justify-content-center align-items-center">

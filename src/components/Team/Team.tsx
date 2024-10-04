@@ -65,27 +65,27 @@ const Team = () => {
     ];
 
     return (
-        <div style={{backgroundColor: 'white'}}>
-        <div className="container" style={{backgroundColor: 'white', marginTop: '60px'}}>
-            <div className="text-center mb-5">
-                <h2>About Us</h2>
-                <p>At Nazcas, we're a team of tech enthusiasts from BRNDTS, driven by a shared vision: using cutting-edge technology 
-                    to make space safer for human habitation. Our diverse skills blend into a powerhouse of innovation and creativity. 
-                    Meet the brilliant minds behind QuakeAway:</p>
+        <div className="team-section" style={{backgroundColor: 'white'}}>
+            <div className="container" style={{backgroundColor: 'white', padding: '80px'}}>
+                <div className="text-center mb-5">
+                    <h2 className="title">About Us</h2>
+                    <p>At Nazcas, we're a team of tech enthusiasts from BRNDTS, driven by a shared vision: using cutting-edge technology 
+                        to make space safer for human habitation. Our diverse skills blend into a powerhouse of innovation and creativity. 
+                        Meet the brilliant minds behind QuakeAway:</p>
+                </div>
+                <div className="row">
+                    {teamMembers.map((member, index) => (
+                        <div className="col-md-6" key={index}>
+                            <TeamMemberCard
+                                name={<span className="name">{member.name}</span>} 
+                                role={member.role}
+                                description={<span className="description">{member.description}</span>} 
+                                image={member.image}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="row">
-                {teamMembers.map((member, index) => (
-                    <div className="col-md-6" key={index}>
-                        <TeamMemberCard
-                            name={member.name}
-                            role={member.role}
-                            description={member.description}
-                            image={member.image}
-                        />
-                    </div>
-                ))}
-            </div>
-        </div>
         </div>
     );
 };

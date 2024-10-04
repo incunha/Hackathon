@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Banner3.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Info1 from './Info/Info1';

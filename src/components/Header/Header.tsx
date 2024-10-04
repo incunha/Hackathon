@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo_horizontal from '../../assets/logo_horizontal.png';
 import './Header.scss';

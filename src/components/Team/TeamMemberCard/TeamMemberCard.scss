@@ -13,18 +13,17 @@
         border-radius: 50%;
     }
 
-    .card-title {
-        color: #3B3172;
-        font-size: 16px;
+    .name {
+        font-weight: bold; 
+        color: #3B3172; 
     }
 
-    .card-subtitle {
-        color: #3B3172;
-        font-size: 16px;
+    .role {
+        color: #3B3172; 
     }
 
-    .card-text {
-        color: #001FA3; 
-        font-size: 16px;
+    .description {
+        color: #001FA3
     }
+    
 }

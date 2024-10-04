@@ -1,11 +1,11 @@
-import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 
 const Info1 = () => {
     return (
         <div className="banner3" >
-            <div className="overlay d-flex flex-column justify-content-center align-items-center text-center">
+            <div className="overlay d-flex flex-column justify-content-left align-items-left text-left">
                 <Container>
                     <h3 >About QuakeAway</h3>
                     <p >QuakeAway is a cutting-edge seismic data analysis solution developed to revolutionize planetary exploration and 

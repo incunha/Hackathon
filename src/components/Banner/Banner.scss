@@ -50,7 +50,8 @@
 
     h1.shake {
         animation: shake 0.75s;
-        animation-iteration-count: infinite; 
+        animation-iteration-count: infinite;
+
     }
     h3.shake {
         animation: shake 0.75s;
@@ -58,9 +59,11 @@
     }
     h1 {
         font-size: 100px !important;
+        font-weight: bold;
     }
     h3 {
         font-size: 50px;
+        font-weight: bold;
     }
 
 }
