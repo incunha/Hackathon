@@ -1,0 +1,32 @@
+.banner2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 510px; 
+    background-color: white;
+
+    .text-container {
+        padding: 20px; 
+        color: #001FA3; 
+    }
+
+    .image-container {
+        position: relative; 
+        overflow: hidden; 
+        img {
+            max-width: 372px;
+            max-height: 258px;
+            border-radius: 37px;
+            transition: opacity 0.5s ease-in;
+
+            &.fade-in {
+                opacity: 1;
+            }
+
+            &.fade-out {
+                opacity: 0;
+            }
+        }
+    }
+}

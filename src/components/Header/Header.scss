@@ -1,0 +1,24 @@
+.header {
+    height: 70px; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+
+    .logo {
+        height: 50px !important;
+        margin-left: 30px;
+    }
+
+    .nav-link {  
+        color: #3B3172;
+        font-size: 16px;  
+        font-weight: bold;  
+        margin-left: 20px;
+
+        &:hover {
+            color: #5A4C91; 
+            transition: color 0.3s ease; 
+    }
+}
+
+}
