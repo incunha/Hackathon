@@ -20,5 +20,9 @@
             transition: color 0.3s ease; 
     }
 }
-
+@media (max-width: 768px) {
+    .nav-link {
+        margin-left: -5px; 
+    }
+}
 }

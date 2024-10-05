@@ -6,7 +6,7 @@ const ContactCard = () => {
     const description = "Want to learn more about how QuakeAway is changing the future of space construction? We'd love to hear from you! Get in touch with our team:";
     const email = "info@quakeaway.com";
     const phone = "+1-800-QUAKEAWAY";
-    const phrase = "Let's make space a safer place—together!";
+    const phrase = "Let's make space a safer place-together!";
 
     return (
         <div className="contact-card">

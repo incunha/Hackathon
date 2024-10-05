@@ -11,19 +11,21 @@
         height: 120px;
         object-fit: cover; 
         border-radius: 50%;
+        margin-top: 20px;
     }
 
-    .name {
+    .card-title {
         font-weight: bold; 
-        color: #3B3172; 
+        color: #3B3172 ;
+        margin-bottom: 10px; 
     }
 
-    .role {
+    .card-subtitle {
         color: #3B3172; 
+        margin-bottom: 10px; 
     }
 
-    .description {
+    .card-text {
         color: #001FA3;
     }
 }
-

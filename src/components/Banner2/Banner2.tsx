@@ -3,7 +3,7 @@ import './Banner2.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Button } from 'react-bootstrap'; 
 import Turkey from '../../assets/Turkey.jpg';
-import earthquake2 from '../../assets/earthquake2.jpeg'; 
+import earthquake2 from '../../assets/earthquake2.jpg'; 
 import earthquake3 from '../../assets/earthquake3.jpg'; 
 import earthquake4 from '../../assets/earthquake4.jpg'; 
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Banner2 = () => {
                 setIndex((prevIndex) => (prevIndex + 1) % images.length);
                 setCurrentImage(images[(index + 1) % images.length]);
                 setFadeClass('fade-in');
-            }, 500); 
+            }, 800); 
         }, 5000); 
 
         return () => clearInterval(interval); 

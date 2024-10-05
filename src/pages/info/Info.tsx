@@ -3,6 +3,7 @@ import "./Info.scss";
 import RippleLoader from "./RippleLoader";
 import UploadFileView from "./UploadFileView";
 import { useState } from "react";
+import FileInfo from "../../components/FileInfo/FileInfo";
 
 function Info() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -28,15 +29,16 @@ function Info() {
       className="d-flex flex-column align-items-center"
       style={{ flex: 1 }}
     >
-      {(!loading && !res) && (
+      {/*{(!loading && !res) && (
         <UploadFileView
           onSuccess={onUploadSucess}
           OnError={onUploadError}
           onProcessing={onProcessing}
         ></UploadFileView>
-      )}
-      {loading && <RippleLoader size={250} />}
-      {(!loading && res?.rep) && <img src={res.rep}></img>}
+      )} */}
+      {/*{loading && <RippleLoader size={250} />}*/}
+      {/*{(!loading && res?.rep) && <img src={res.rep}></img>}*/}
+      <FileInfo/>
     </Container>
   );
 }
