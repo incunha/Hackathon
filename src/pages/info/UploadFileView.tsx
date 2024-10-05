@@ -7,13 +7,13 @@ import uploadIcon from "../../assets/upload_icon.png";
 
 function UploadFileView({onSuccess, OnError, onProcessing}: {onSuccess: (results: {rep?: string}) => void, OnError: (error?: Error) => void, onProcessing: () => void}) {
   const [file, setFiles] = useState<File | null>(null);
-  const [image, setImage] = useState<string | null>(null);
 
   useEffect(() => {
     if (file) {
       uploadFile(file);
     }
   }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   , [file]);
 
   const uploadFile = async (file: File) => {
@@ -40,11 +40,6 @@ function UploadFileView({onSuccess, OnError, onProcessing}: {onSuccess: (results
 
           // Criar uma URL local para exibir a imagem no frontend
           const imageURL = URL.createObjectURL(imageBlob);
-          setImage(imageURL);
-          // Exibir a imagem, exemplo de como usá-la
-          // const imgElement = document.createElement('img');
-          // imgElement.src = imageURL;
-          // document.body.appendChild(imgElement);  // Adiciona a imagem no corpo da página
 
           onSuccess({rep: imageURL});
         } else {
